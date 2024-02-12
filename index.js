@@ -1,3 +1,4 @@
+
 import axios from "axios";
 import express from "express";
 import bodyParser from "body-parser";
@@ -9,7 +10,7 @@ const port = 3000;
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 const API_URL = "https://api.openweathermap.org/data/2.5/weather?q=";
-const apiKeyToken = "dbb9d18d61e5b8e69225a55e112a9268";
+const API_KEY = process.env.API_KEY;
 
 
 app.get("/", async (req, res) => {
