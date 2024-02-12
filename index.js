@@ -21,7 +21,7 @@ app.post("/forecast", async (req, res) => {
   try {
     // added city input and reinserted API key.
     let city = req.body.city;
-    const result = await axios.get(API_URL + `${city}&appid=${apiKeyToken}&units=metric`);
+    const result = await axios.get(API_URL + `${city}&appid=${API_KEY}&units=metric`);
 
     // City Name
     const cityName = result.data.name;
