@@ -1,2 +1,20 @@
-<%- include("headers.ejs") %>
-<%- include("footers.ejs") %>
+<%- include("partials/headers.ejs") %>
+
+<div logo>
+  <h1>Weather App</h1>
+</div>
+
+<form action="/forecast" method="post" id="form">
+    <div class="cityDiv">
+        <label for="city">Enter Your City:</label>
+        <input type="text" id="city" name="city">
+    </div>
+    <button class="button-85" type="submit">"Get Forecast"</button>
+</form>
+
+<footer class="footerIndex">
+  <p>Copyright GaveHubs© <%= new Date().getFullYear() %></p>
+</footer>
+
+</body>
+</html>

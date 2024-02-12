@@ -1,0 +1,86 @@
+<%- include("partials/headers.ejs") %>
+
+    <div class="mesh-bg">
+
+        <div class="static-container">
+            <div class="arrow-container">
+                <a href="/">
+                    <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m9.55 12l7.35 7.35q.375.375.363.875t-.388.875q-.375.375-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675t-.15-.75q0-.375.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388q.375.375.375.875t-.375.875z" />
+                    </svg>
+                </a>
+            </div>
+
+            <% if (locals.data) { %>
+
+                <div class="weather-wrapper">
+
+                    <div class="header-content">
+                        <div class="city-title">
+                            <%=cityName %>, <%=stateName %> (<%=countryName %>)
+                        </div>
+                        <div class="date-title">
+                            <%=currentDate %>
+                        </div>
+                        <div class="weather-condition">
+                            <%=weatherDesc %>
+                        </div>
+                        <div class="temperature">
+                            <%=temperature %>°
+                        </div>
+                    </div>
+
+                    <div class="rectangular-box">
+                        <div class="weather-item">
+                            <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <path fill="currentColor"
+                                    d="M34.33 77.68a8 8 0 0 1 0-11.34C35.1 65.59 53.1 48 88 48c18.42 0 32.24 9.21 44.44 17.34C143.74 72.88 154.42 80 168 80a72.21 72.21 0 0 0 31.75-6.83a44.87 44.87 0 0 0 10.63-6.87a8 8 0 0 1 11.27 11.36C220.9 78.41 202.9 96 168 96c-18.42 0-32.24-9.21-44.44-17.34C112.26 71.12 101.58 64 88 64a72.21 72.21 0 0 0-31.75 6.83a44.87 44.87 0 0 0-10.63 6.87a8 8 0 0 1-11.29-.02m176.05 44.62a44.87 44.87 0 0 1-10.63 6.87A72.21 72.21 0 0 1 168 136c-13.58 0-24.26-7.12-35.56-14.66C120.24 113.21 106.42 104 88 104c-34.9 0-52.9 17.59-53.65 18.34a8 8 0 0 0 11.27 11.36a44.87 44.87 0 0 1 10.63-6.87A72.21 72.21 0 0 1 88 120c13.58 0 24.26 7.12 35.56 14.66c12.2 8.13 26 17.34 44.44 17.34c34.9 0 52.9-17.59 53.65-18.34a8 8 0 0 0-11.27-11.36m0 56a44.87 44.87 0 0 1-10.63 6.87A72.21 72.21 0 0 1 168 192c-13.58 0-24.26-7.12-35.56-14.66C120.24 169.21 106.42 160 88 160c-34.9 0-52.9 17.59-53.65 18.34a8 8 0 0 0 11.27 11.36a44.87 44.87 0 0 1 10.63-6.87A72.21 72.21 0 0 1 88 176c13.58 0 24.26 7.12 35.56 14.66c12.2 8.13 26 17.34 44.44 17.34c34.9 0 52.9-17.59 53.65-18.34a8 8 0 0 0-11.27-11.36" />
+                            </svg>
+                            <div class="info">
+                                <%=windSpeed %>mph
+                            </div>
+                            <div class="criteria">Wind</div>
+                        </div>
+                        <div class="weather-item">
+                            <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M12.5 9a4.5 4.5 0 1 1-9 0c0-1.638.761-3.242 1.789-4.64a16.57 16.57 0 0 1 2.714-2.847c.591.48 1.722 1.483 2.707 2.817c1.024 1.389 1.79 3 1.79 4.67M14 9A6 6 0 0 1 2 9C2 4.819 5.846 1.337 7.106.309C7.359.102 7.676 0 8.003 0c.323 0 .637.1.888.302C10.148 1.312 14 4.759 14 9m-6 3.25a.75.75 0 0 1 0-1.5A1.75 1.75 0 0 0 9.75 9a.75.75 0 0 1 1.5 0A3.25 3.25 0 0 1 8 12.25"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <div class="info">
+                                <%=humidity %>%
+                            </div>
+                            <div class="criteria">Humidity</div>
+                        </div>
+                        <div class="weather-item">
+                            <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M13.23 6.33a1 1 0 0 1 0 1.34C12.18 8.8 9.79 11 7 11S1.82 8.8.77 7.67a1 1 0 0 1 0-1.34C1.82 5.2 4.21 3 7 3s5.18 2.2 6.23 3.33Z" />
+                                    <circle cx="7" cy="7" r="2" />
+                                </g>
+                            </svg>
+                            <div class="info">
+                                <%=visibility %>mi
+                            </div>
+                            <div class="criteria">Visibility</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <% } %>
+
+                    <% if (locals.error) { %>
+                        <p class="error-message">
+                            <%=error %>
+                        </p>
+                        <% } %>
+
+        </div>
+
+    </div>
+    </body>
+
+    </html>

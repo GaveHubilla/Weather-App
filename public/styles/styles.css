@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: azure;
+  background-image: url("/images/background-wallpaper.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;      
+  background-color: #cccccc;
+}
+
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cityDiv {
+  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 5px;
+}
+
+.button-85 {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.locHead {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.locShowCase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.weatherIcon {
+  width: 100px;
+  height: 100px;
+}
+
+.celcius {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.celciusDex {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.data-row {
+  text-align: center;
+  padding: 10px;
+}
+
+.dataPictures {
+  width: 40px;
+  height: 40px;
+}
+
+h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+h3, p {
+  color: white;
+}
+
+footer {
+  text-align: center;
+}
+
+.footerIndex { 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  z-index: 10;
+  color: white
+  
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}

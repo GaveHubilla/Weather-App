@@ -1,0 +1,72 @@
+<%- include("partials/headers.ejs") %>
+
+<form action="/forecast" method="post" id="form">
+    <div class="cityDiv">
+        <input type="text" id="city" name="city" placeholder="Enter Your City">
+    </div>
+</form>
+
+
+<div class="locHead">
+    <h1 style="font-size: calc(1.375rem + 1.5vw)"><span style="color: rgb(86, 0, 192)"><%= cityName%></span> Weather Forecast</h1>
+</div>  
+<div class="locShowCase">   
+  <div style="padding-right: 50px;">
+    <img class="weather-Icon" src="<%= urlPic%>" alt="weatherIcon">
+
+
+  </div>
+  <div>
+    <h2 style="color: rgba(66, 9, 101, 0.784);"><%= weather %></h2>
+  </div>
+  </div>
+
+  <div class="celcius">
+    <h1 style="color: rgb(15, 225, 253); font-size: 4rem;"><%= temp %>°C</h1>
+  </div>
+  <div class="celciusDex">
+
+    <h3>Weather Today in <span style="color: rgb(86, 0, 192) "><%= cityName%></span></h3>
+    <div>
+ 
+        
+        <h4>Temperature:</h4>
+        <h4 style="color: rgb(15, 225, 253)"><%= minTemp%>°C | <%= maxTemp%>°C</h4>
+
+    </div>
+  </div>      
+  <div class="data">
+    <div class="data-row">
+        <img class="dataPictures" src="/images/barometer.png" alt="barometer-logo">
+        <div>
+            <h3>Temp Feels</h3>
+            <p><%= tempFeels %>%</p>
+        </div>
+    </div>  
+    <div class="data-row">
+        <img class="dataPictures" src="/images/humidity1.png" alt="humidity-logo">
+        <div>
+            <h3>Humidity</h3>
+            <p><%= humidity %>%</p>
+        </div>
+    </div>
+    <div  class="data-row">
+        <img class="dataPictures" src="/images/thermometer.png" alt="thermometer-logo">
+        <div>
+            <h3>Pressure</h3>
+            <p>↔<%= pressure%>mb</p>
+        </div>
+    </div>
+    <div class="data-row">
+        <img class="dataPictures" src="/images/windy.png" alt="windy-logo">
+        <div>
+            <h3>W-Speed</h3>
+            <p><%= windSpeed%>kph</p>
+        </div>
+    </div>
+  </div>
+
+
+
+
+<%- include("partials/footers.ejs") %>
